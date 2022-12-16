@@ -42,3 +42,20 @@ output4.innerHTML = slider4.value;
 slider4.oninput = function() {
     output4.innerHTML = slider4.value;
 }
+
+
+
+//temp api call
+function apiCallGetInfo(){
+    var model = document.getElementById("selected-model");
+    var modelValue = model.value;
+    var modelChoice = model.options[model.selectedIndex].text
+
+    var temp = document.getElementById("selected-temp").value;
+    var length = document.getElementById("selected-length").value;
+    var frequency = document.getElementById("selected-frequency").value;
+    var presence = document.getElementById("selected-presence").value;
+    var prompt = document.getElementById("prompt");
+
+    prompt.value+=modelChoice+temp.toString();
+}
