@@ -135,6 +135,29 @@ html {
 }
 
 
+#selected-model{
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+option{ 
+    /* Whatever color  you want */
+    background-color: #1e2b3f;
+}
+
+
+
+
+
+
+
+
 
 
 #menu{
@@ -152,17 +175,14 @@ html {
     background:rgba(255, 255, 255, 0.05);
     z-index: 0;
 
-}
-
-#inner-menu{
-    align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: large;
+    align-items: center;
+
 }
 
 hr{
-    width: 90%;
+    width: 100%;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px;
@@ -174,59 +194,45 @@ hr{
 
 
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;  
     appearance: none;
-    width: 200px; /* Full-width */
-    height: 25px; /* Specified height */
-    background: rgba(255, 255, 255, 0.1); /* Grey background */
-    outline: none; /* Remove outline */
+    width: 200px; 
+    height: 25px; 
+    background: rgba(255, 255, 255, 0.1); 
+    outline: none; 
     border-radius: 25px;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: white; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px;
+    height: 25px; 
+    background: white; 
+    cursor: pointer; 
     border-radius: 25px;
 }
 
 .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: white; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px; 
+    height: 25px; 
+    background: white; 
+    cursor: pointer; 
     border-radius: 25px;
 }
-  
-#menu-option{
+
+
+.params{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+}
+
+h5{
+    vertical-align: middle;
     margin: auto;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-#titlehead{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
-#selected-model{
-    font-size: large;
-    background-color: rgba(255, 255, 255, 0.1);
-    outline: none;
-    border: none;
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-option{ 
-    /* Whatever color  you want */
-    background-color: #1e2b3f;
+    margin-left: 10px;
+    max-width: 10px;
+    width: 10px;
 }
