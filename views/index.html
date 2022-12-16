@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Open AI API Caller</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c4516edd08.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div id="flexarea">
+      
+      <div id="main">
+        <textarea id="prompt"> </textarea>
+        <span id="input-area">
+          <h1 id="API-head">API Key:</h1>
+          <input type="password" id="api-key">
+          <button id="view-button" type="button" onclick="toggleShowPass()"><i id="eye-icon" class="fa-regular fa-eye-slash"></i></button>
+          <button id="submit-button" type="button">Submit</button>
+        <span id="input-area">
+      </div>
+
+      <div id="menu">
+        <div id="inner-menu">
+          <div class="menu-option">
+            <h2 class="titlehead">Model</h2>
+            <select name="model" id="selected-model">
+              <option value="">text-davinci-003</option>
+              <option value="">text-curie-001</option>
+              <option value="">text-babbage-001</option>
+              <option value="">text-ada-001</option>
+            </select>
+          </div>
+
+          <hr>
+
+          <div class="menu-option">
+            <h2 class="titlehead">Temperature</h2>
+            <input type="range" min="0" max="1" value="0.3" step="0.05" class="slider" id="selected-temp">
+            <h5 id="selected-temp-value">35</h5>
+          </div>
+
+          <hr>
+
+          <div class="menu-option">
+            <h2 class="titlehead">Max Length</h2>
+            <input type="range" min="0" max="1024" value="512" class="slider" id="selected-length">
+          </div>
+
+          <hr>
+
+          <div class="menu-option">
+            <h2 class="titlehead">Frequency penalty</h2>
+            <input type="range" min="0" max="2" value="1" step="0.1" class="slider" id="selected-frequency">
+          </div>
+
+          <hr>
+
+          <div class="menu-option">
+            <h2 class="titlehead">Presence penalty</h2>
+            <input type="range" min="0" max="2" value="1" step="0.05" class="slider" id="selected-presence">
+          </div>
+
+          <hr>
+          
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
+

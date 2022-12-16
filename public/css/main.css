@@ -1,0 +1,232 @@
+html {
+    background: url("https://www.pixel4k.com/wp-content/uploads/2019/03/texture-dark-gradient-4k_1553075407.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+#flexarea{
+    display: flex;
+}
+
+#main{
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    width: 80vw;
+    height: 95vh;
+    
+    background: rgba(217, 217, 217, 0.12);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 25px;
+    background:rgba(255, 255, 255, 0.05);
+
+    flex-direction: column;
+    z-index: 0;
+
+
+}
+
+#promt-area{
+    margin: 10px;
+}
+
+#prompt{
+    display: flex;
+    margin: 20px;
+    margin-bottom: 5px;
+    resize: none;
+    outline: none;
+    width: auto;
+    height: 85%;
+    padding: 20px;
+
+    background:rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    border: 0px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    z-index: 1;
+}
+
+
+
+#submit-button{
+    border-radius: 25px;
+    background:rgba(255, 255, 255, 0.05);
+    height: 10vh;
+    width: 10vw;
+    margin-left: auto;
+    font-size: 40px;
+    color: white;
+    outline: none;
+    border: none;
+
+    overflow: hidden;
+    order: 2;
+}
+
+#submit-button:active{
+    background:rgba(255, 255, 255, 0.2);
+}
+
+#submit-button:hover{
+    cursor: pointer;
+}
+
+
+
+
+#input-area{
+    margin: 1px;
+    padding: 10px;
+    align-items: flex-start;
+    display:flex;
+    vertical-align: middle;
+    align-items: center;
+
+}
+
+#API-head{
+    color: white;
+    display: inline;
+    margin: 10px;
+    margin-right: 0px;
+    font-size: 40px;
+}
+
+#api-key{
+    margin-left: 0px;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 30px;
+    width: 575px;
+    background:rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+}
+
+#api-key:focus{
+    outline: none;
+}
+
+#view-button{
+    border-radius: 25px;
+    background:rgba(255, 255, 255, 0.05);
+    height: 7vh;
+    width: 5vw;
+    margin: 10px;
+    font-size: 50px;
+    color: white;
+    outline: none;
+    border: none;
+    vertical-align: middle;
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+#view-button:hover{
+    cursor: pointer;
+}
+
+
+
+
+#menu{
+    height: 95vh;
+    width: 20vw;
+    margin: 10px;
+    min-width: 300px;
+    color: white;
+    
+    background: rgba(217, 217, 217, 0.12);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 25px;
+    background:rgba(255, 255, 255, 0.05);
+    z-index: 0;
+
+}
+
+#inner-menu{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+
+hr{
+    width: 90%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+
+
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 200px; /* Full-width */
+    height: 25px; /* Specified height */
+    background: rgba(255, 255, 255, 0.1); /* Grey background */
+    outline: none; /* Remove outline */
+    border-radius: 25px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 25px;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 25px;
+}
+  
+#menu-option{
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#titlehead{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#selected-model{
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+option{ 
+    /* Whatever color  you want */
+    background-color: #1e2b3f;
+}
