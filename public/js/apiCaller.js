@@ -45,7 +45,10 @@ slider4.oninput = function() {
 
 
 function apiCallTestSubmit(){
-  
+    document.getElementById("prompt").disabled = true;
+    document.getElementById("prompt").style="background:rgba(100, 100, 100, 0.1);";
+    document.getElementsByClassName("lds-facebook")[0].style="visibility: visible";
+
     // Get the values of the input fields
     var model = document.getElementById("selected-model");
     var modelValue = model.value;
@@ -59,8 +62,6 @@ function apiCallTestSubmit(){
     var apiKey = document.getElementById("api-key").value.toString();
     // Get the values of the other input fields
 
-    console.log('You did indeed click the button');
-  
     fetch('/apiCall', {
         method: 'POST',
         headers: {
@@ -71,14 +72,50 @@ function apiCallTestSubmit(){
     })
     .then(response => response.json())
     .then(response => updateWithData(response))
-    
-  };
-  
-  function updateWithData(response){
+
+};
+
+function updateWithData(response){
     if(response.choices[0].text == ''){
         document.getElementById("prompt").value += '[NO COMPLEATION]';
-        
+        document.getElementById("prompt").style="background:rgba(255, 100, 100, 0.1);";
+
     }else{
         document.getElementById("prompt").value += response.choices[0].text;
+        document.getElementById("prompt").style="background:rgba(255, 255, 255, 0.1);";
     }
-  }
+
+    document.getElementById("prompt").disabled = false;
+    document.getElementsByClassName("lds-facebook")[0].style="visibility: hidden";
+}
+
+
+
+
+
+
+
+
+
+//keep API key
+function parseQuery(str) {
+    //Remove '?' from beginning.
+    str = str.substring(1) 
+    //split the string into key value pairs
+    var pairs = str.split("&")
+    //convert them into an object
+    return pairs.reduce(function(map, pair) {
+        console.log(pair)
+        var kv = pair.split("=")
+        var key = kv[0]
+        var value = kv[1]
+        map[key] = value
+        return map
+    },{})
+}
+
+
+var query = window.location.search
+var keyInfo = parseQuery(query);
+
+document.getElementById('api-key').value = keyInfo.APIkeyid;

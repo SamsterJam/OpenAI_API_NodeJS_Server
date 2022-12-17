@@ -84,5 +84,3 @@ async function OpenAIAPICall() {
 app.post('/apiCall', callAPI);
 
 
-
-
