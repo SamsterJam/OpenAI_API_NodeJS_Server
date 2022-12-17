@@ -44,9 +44,9 @@ slider4.oninput = function() {
 }
 
 
-
-//temp api call
-function apiCallGetInfo(){
+function apiCallTestSubmit(){
+  
+    // Get the values of the input fields
     var model = document.getElementById("selected-model");
     var modelValue = model.value;
     var modelChoice = model.options[model.selectedIndex].text
@@ -55,7 +55,30 @@ function apiCallGetInfo(){
     var length = document.getElementById("selected-length").value;
     var frequency = document.getElementById("selected-frequency").value;
     var presence = document.getElementById("selected-presence").value;
-    var prompt = document.getElementById("prompt");
+    var prompt = document.getElementById("prompt").value.toString();
+    var apiKey = document.getElementById("api-key").value.toString();
+    // Get the values of the other input fields
 
-    prompt.value+=modelChoice+temp.toString();
-}
+    console.log('You did indeed click the button');
+  
+    fetch('/apiCall', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ "model": modelChoice, "prompt": prompt, "temperature": parseFloat(temp), "length": parseInt(length), "frequency": parseFloat(frequency), "presence": parseFloat(presence), "apiKey": apiKey})
+    })
+    .then(response => response.json())
+    .then(response => updateWithData(response))
+    
+  };
+  
+  function updateWithData(response){
+    if(response.choices[0].text == ''){
+        document.getElementById("prompt").value += '[NO COMPLEATION]';
+        
+    }else{
+        document.getElementById("prompt").value += response.choices[0].text;
+    }
+  }
