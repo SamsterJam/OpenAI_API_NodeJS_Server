@@ -1,6 +1,7 @@
 html {
     background-color: #121212;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
 #flexarea{
@@ -172,8 +173,8 @@ option{
     height: 95vh;
     width: 20vw;
     margin: 10px;
-    min-width: 290px;
-    max-width: 290px;
+    min-width: 200px;
+    max-width: 200px;
     color: white;
     
     border-radius: 10px;
@@ -203,7 +204,7 @@ hr{
 .slider {
     -webkit-appearance: none;  
     appearance: none;
-    width: 200px; 
+    width: auto; 
     height: 25px; 
     background: rgba(255, 255, 255, 0.1); 
     outline: none; 
@@ -236,14 +237,19 @@ hr{
     vertical-align: middle;
 }
 
+h2{
+    font-size: large;
+}
+
 h5{
     vertical-align: middle;
     margin: auto;
-    margin-left: 10px;
+    margin-left: 5px;
     max-width: 10px;
     width: 10px;
-    font-size: large;
+    font-size: medium;
 }
+
 
 
 
