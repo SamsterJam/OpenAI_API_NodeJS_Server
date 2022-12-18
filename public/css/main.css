@@ -1,9 +1,5 @@
 html {
-    background: url("https://www.pixel4k.com/wp-content/uploads/2019/03/texture-dark-gradient-4k_1553075407.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #121212;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -18,12 +14,9 @@ html {
     
     height: 95vh;
     
-    background: rgba(217, 217, 217, 0.12);
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
-    border-radius: 25px;
-    background:rgba(255, 255, 255, 0.05);
+    box-shadow: 5px 5px 2px #101010, -5px -5px 2px #141414;
+    border-radius: 10px;
+    background:rgba(255, 255, 255, 0);
 
     flex-direction: column;
     z-index: 0;
@@ -32,9 +25,8 @@ html {
 }
 
 #promt-area{
-    margin: 10px;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    padding: 0px;
+    margin: 0px;
 }
 
 #prompt{
@@ -45,10 +37,10 @@ html {
     outline: none;
     width: auto;
     height: 85%;
-    padding: 20px;
+    padding: 10px;
 
-    background:rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
+    background: #1d1d1d;
+    border-radius: 10px;
     border: 0px;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -59,23 +51,30 @@ html {
 
 
 #submit-button{
-    border-radius: 25px;
+    border-radius: 10px;
     background:rgba(255, 255, 255, 0.05);
     height: 10vh;
     width: 10vw;
-    min-width: 135px;
+    min-width: 100px;
     margin-left: auto;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     outline: none;
     border: none;
 
     overflow: hidden;
     order: 2;
+
+    border-radius: 45px;
+    background: linear-gradient(145deg, #131313, #101010);
+    box-shadow:  5px 5px 10px #0d0d0d,
+                -5px -5px 10px #171717;
 }
 
 #submit-button:active{
-    background:rgba(255, 255, 255, 0.2);
+    background: linear-gradient(145deg, #101010, #131313);
+    box-shadow:  5px 5px 10px #0d0d0d,
+                -5px -5px 10px #171717;
 }
 
 #submit-button:hover{
@@ -99,8 +98,8 @@ html {
     display: inline;
     margin: 10px;
     margin-right: 10px;
-    min-width: 150px;
-    font-size: 40px;
+    min-width: 95px;
+    font-size: 25px;
 }
 
 #api-key{
@@ -108,11 +107,14 @@ html {
     font-size: 30px;
     padding: 10px;
     border-radius: 30px;
-    width: 30vw;
-    min-width: 400px;
-    background:rgba(255, 255, 255, 0.05);
+    width: 20vw;
+    min-width: 100px;
     border: none;
     color: white;
+
+    border-radius: 45px;
+    background: #1e1e1e;
+    box-shadow: inset 5px 5px 10px #161616, inset -5px -5px 10px #252525;
 }
 
 #api-key:focus{
@@ -125,14 +127,17 @@ html {
     height: 7vh;
     width: 5vw;
     margin: 10px;
-    font-size: 50px;
+    font-size: 25px;
     color: white;
     outline: none;
     border: none;
     vertical-align: middle;
-    padding-top: 3px;
     overflow: hidden;
-    min-width: 75px;
+    min-width: 50px;
+    border-radius: 45px;
+    background: linear-gradient(145deg, #131313, #101010);
+    box-shadow:  5px 5px 10px #0b0b0b,
+                 -5px -5px 10px #191919;
 }
 
 #view-button:hover{
@@ -163,27 +168,23 @@ option{
 
 
 
-
-
 #menu{
     height: 95vh;
     width: 20vw;
     margin: 10px;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 290px;
+    max-width: 290px;
     color: white;
     
-    background: rgba(217, 217, 217, 0.12);
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 25px;
-    background:rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    background:#1a1a1a;
     z-index: 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    box-shadow: 5px 5px 2px #101010, -5px -5px 2px #141414;
 
 }
 

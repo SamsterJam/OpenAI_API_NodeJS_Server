@@ -3,11 +3,11 @@ function toggleShowPass(){
     if (inpass.type === "password") {
         inpass.type = "text";
         document.getElementById("eye-icon").className = "fa-regular fa-eye";
-        document.getElementById("view-button").style = "background:rgba(255, 255, 255, 0.01)";
+        document.getElementById("view-button").style = "border-radius: 45px; background: #121212; box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #191919;";
     } else {
         inpass.type = "password";
         document.getElementById("eye-icon").className = "fa-regular fa-eye-slash";
-        document.getElementById("view-button").style = "background:rgba(255, 255, 255, 0.05)";
+        document.getElementById("view-button").style = "border-radius: 45px; background: linear-gradient(145deg, #131313, #101010); box-shadow:  5px 5px 10px #0b0b0b, -5px -5px 10px #191919;";
     }
 }
 
@@ -78,11 +78,11 @@ function apiCallTestSubmit(){
 function updateWithData(response){
     if(response.choices[0].text == '' || response.choices[0] == 'API-ERROR'){
         document.getElementById("prompt").value += '[NO COMPLEATION]';
-        document.getElementById("prompt").style="background:rgba(255, 100, 100, 0.1);";
+        document.getElementById("prompt").style="background: #1C1515;";
 
     }else{
         document.getElementById("prompt").value += response.choices[0].text;
-        document.getElementById("prompt").style="background:rgba(255, 255, 255, 0.1);";
+        document.getElementById("prompt").style="#1d1d1d";
     }
 
     document.getElementById("prompt").disabled = false;
