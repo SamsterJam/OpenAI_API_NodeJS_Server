@@ -76,7 +76,7 @@ function apiCallTestSubmit(){
 };
 
 function updateWithData(response){
-    if(response.choices[0].text == ''){
+    if(response.choices[0].text == '' || response.choices[0] == 'API-ERROR'){
         document.getElementById("prompt").value += '[NO COMPLEATION]';
         document.getElementById("prompt").style="background:rgba(255, 100, 100, 0.1);";
 
@@ -105,7 +105,6 @@ function parseQuery(str) {
     var pairs = str.split("&")
     //convert them into an object
     return pairs.reduce(function(map, pair) {
-        console.log(pair)
         var kv = pair.split("=")
         var key = kv[0]
         var value = kv[1]

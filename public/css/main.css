@@ -63,6 +63,7 @@ html {
     background:rgba(255, 255, 255, 0.05);
     height: 10vh;
     width: 10vw;
+    min-width: 135px;
     margin-left: auto;
     font-size: 40px;
     color: white;
@@ -107,7 +108,8 @@ html {
     font-size: 30px;
     padding: 10px;
     border-radius: 30px;
-    width: 575px;
+    width: 30vw;
+    min-width: 400px;
     background:rgba(255, 255, 255, 0.05);
     border: none;
     color: white;
@@ -167,8 +169,8 @@ option{
     height: 95vh;
     width: 20vw;
     margin: 10px;
-    min-width: 310px;
-    max-width: 310px;
+    min-width: 300px;
+    max-width: 300px;
     color: white;
     
     background: rgba(217, 217, 217, 0.12);
