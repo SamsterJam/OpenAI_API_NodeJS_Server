@@ -41,13 +41,13 @@ async function callAPI(request, response, next){
         const openai = new OpenAIApi(configuration);
 
         const APIresponse = await openai.createCompletion({
-        model: parameters.model,
-        prompt: parameters.prompt,
-        temperature: parameters.temperature,
-        max_tokens: parameters.length,
-        top_p: 1,
-        frequency_penalty: parameters.frequency,
-        presence_penalty: parameters.presence,
+            model: parameters.model,
+            prompt: parameters.prompt,
+            temperature: parameters.temperature,
+            max_tokens: parameters.length,
+            top_p: 1,
+            frequency_penalty: parameters.frequency,
+            presence_penalty: parameters.presence,
         });
 
 

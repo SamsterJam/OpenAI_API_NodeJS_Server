@@ -62,6 +62,8 @@ html {
     color: white;
     outline: none;
     border: none;
+    align-items: center;
+    align-content: center;
 
     overflow: hidden;
     order: 2;
