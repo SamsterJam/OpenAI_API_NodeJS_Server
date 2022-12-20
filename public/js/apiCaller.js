@@ -3,7 +3,7 @@ function toggleShowPass(){
     if (inpass.type === "password") {
         inpass.type = "text";
         document.getElementById("eye-icon").className = "fa-regular fa-eye";
-        document.getElementById("view-button").style = "border-radius: 45px; background: #121212; box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #191919;";
+        document.getElementById("view-button").style = "border-radius: 45px; background: #121212; box-shadow: inset 5px 5px 10px #0b0b0b, inset -5px -5px 10px #191919, -2px -2px 10px #0b0b0b, 2px 2px 10px #191919;";
     } else {
         inpass.type = "password";
         document.getElementById("eye-icon").className = "fa-regular fa-eye-slash";
