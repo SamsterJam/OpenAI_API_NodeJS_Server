@@ -9,6 +9,8 @@ body{
     gap: 0px;
 }
 
+
+
 #mainArea{
     height: 95vh;
     width: 100%;
@@ -18,6 +20,7 @@ body{
     background: #1d1e23;
     box-shadow:  5px 5px 11px #141519,
              -5px -5px 11px #26272e;
+    position: relative;
 }
 
 #prompt{
@@ -28,7 +31,6 @@ body{
     margin: 0px;
     padding: 15px;
 
-    width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -45,15 +47,32 @@ body{
     background-color: #2b2f38;
     color: white;
     border-radius: 10px;
-    overflow: hidden;
+
     font-size: 16px;
-    
 }
+
+
+#prompt::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #1d1e23;
+}
+
+#prompt::-webkit-scrollbar {
+  width: 10px;
+}
+
+#prompt::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #9a7bfd;
+  max-height: 100px;
+}
+
 
 #menu{
     height: auto;
-    max-width: 250px;
-    min-width: 250px;
+    max-width: 200px;
+    min-width: 200px;
     margin: 10px;
 
     background-color: #3a3c49;
@@ -63,7 +82,7 @@ body{
     
     align-items: center;
 
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     display: flex;
     flex-direction: column;
 }
@@ -72,8 +91,10 @@ body{
     font-family: 'Roboto', sans-serif;
     padding: 15px;
     position: fixed;
-    bottom: 6vh;
+    bottom: 5vh;
     margin-left: -150px;
+    outline: 0px;
+    border: 0px;
     
 
     
@@ -81,7 +102,6 @@ body{
     background-color: rgba(255, 255, 255, 0.05);
 
     border-radius: 50%;
-    background: rgb(154,123,253);
     background: linear-gradient(174deg, #9a7bfd 0%, #7558d2 100%);
     border-radius: 100px;
     color: white;
@@ -102,12 +122,138 @@ body{
 
 
 .menu-item{
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
+
+
+#model-selection{
+  color: white;
+  background-color: #2c2f38;
+  outline: 0px;
+  border: 0px;
+  padding: 10px;
+  font-size: large;
+  border-radius: 100px;
+}
+
+#API-Key{
+  background-color: #242830;
+  outline: 0px;
+  border: 0px;
+  border-radius: 100px;
+  color: white;
+  padding: 5px;
+}
+
+h2{
+  color: white;
+  font-size: 22px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+h3{
+  color: white;
+  min-width: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0px;
+}
+
+.slider-field{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  vertical-align: middle;
+}
+
+
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 60%; /* Full-width */
+  height: 8px; /* Specified height */
+  background: #596173; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 100px;
+  margin-left: 10px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #9a7bfd; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 100px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #9a7bfd; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+
+#ghost-text{
+  position: absolute;
+  opacity: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  resize: none;
+  pointer-events:none;
+
+
+  margin: 0px;
+  padding: 15px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: none;
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -161,3 +307,4 @@ body{
       height: 32px;
     }
   }
+
