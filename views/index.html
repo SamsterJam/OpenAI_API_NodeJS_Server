@@ -7,78 +7,41 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style> @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); </style>
         <link rel="icon" type="image/x-icon" href="/img/aisite.ico">
         <script src="https://kit.fontawesome.com/c4516edd08.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <span id="mainArea">
+      <textarea id="prompt" autocapitalize="false" spellcheck="true"></textarea> 
+      <span id="submit-button" onclick="apiCallTestSubmit()">Submit</span> 
+      <span class="loader"><span></span><span></span><span></span></span>
+    </span>
 
-    <div id="flexarea">
-      
-      <div id="main">
-        <textarea id="prompt"> </textarea>
-        <span id="input-area">
-          <h1 id="API-head">API Key:</h1>
-          <input type="password" id="api-key">
-          <button id="view-button" type="button" onclick="toggleShowPass()"><i id="eye-icon" class="fa-regular fa-eye-slash"></i></button>
-          <button onclick="apiCallTestSubmit()" id="submit-button" type="button">Submit</button>
-        </span>
+    <span id="menu">
+      <div class="menu-item">
+        <h1>Model</h1>
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
       </div>
-
-      <div id="menu">
-        <div class="menu-option">
-          <h2 class="titlehead">Model</h2>
-          <select name="model" id="selected-model">
-            <option value="">text-davinci-003</option>
-            <option value="">text-curie-001</option>
-            <option value="">text-babbage-001</option>
-            <option value="">text-ada-001</option>
-          </select>
-        </div>
-
-        <hr>
-
-        <div class="menu-option">
-          <h2 class="titlehead">Temperature</h2>
-          <span class="params">
-            <input type="range" min="0" max="1" value="0.3" step="0.05" class="slider" id="selected-temp">
-            <h5 id="selected-temp-value">0.3</h5>
-          </span>
-        </div>
-
-        <hr>
-
-        <div class="menu-option">
-          <h2 class="titlehead">Max Length</h2>
-          <span class="params">
-            <input type="range" min="0" max="1024" value="512" class="slider" id="selected-length">
-            <h5 id="selected-length-value">512</h5>
-          </span>
-        </div>
-
-        <hr>
-
-        <div class="menu-option">
-          <h2 class="titlehead">Frequency penalty</h2>
-          <span class="params">
-            <input type="range" min="0" max="2" value="1" step="0.1" class="slider" id="selected-frequency">
-            <h5 id="selected-frequency-value">1</h5>
-          </span>
-        </div>
-
-        <hr>
-
-        <div class="menu-option">
-          <h2 class="titlehead">Presence penalty</h2>
-          <span class="params">
-            <input type="range" min="0" max="2" value="1" step="0.05" class="slider" id="selected-presence">
-            <h5 id="selected-presence-value">1</h5>
-          </span>
-        </div>
-        <hr>
+      <div class="menu-item">
+        <h1>Temperature</h1>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
       </div>
-    </div>
-    <div class="lds-facebook"><div></div><div></div><div></div></div>
-    <script src="js/apiCaller.js"></script>
+      <div class="menu-item">
+        <h1>Max Length</h1>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
+      <div class="menu-item">
+        <h1>Temperature</h1>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
+    </span>
   </body>
+  <script src="js/apiCaller.js"></script>
 </html>
 

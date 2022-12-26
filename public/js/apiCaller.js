@@ -1,3 +1,4 @@
+/*
 function toggleShowPass(){
     var inpass = document.getElementById("api-key");
     if (inpass.type === "password") {
@@ -10,7 +11,9 @@ function toggleShowPass(){
         document.getElementById("view-button").style = "border-radius: 45px; background: linear-gradient(145deg, #131313, #101010); box-shadow:  5px 5px 10px #0b0b0b, -5px -5px 10px #191919;";
     }
 }
+*/
 
+/*
 //Temerature Slider
 var slider1 = document.getElementById("selected-temp");
 var output1  = document.getElementById("selected-temp-value");
@@ -43,12 +46,14 @@ slider4.oninput = function() {
     output4.innerHTML = slider4.value;
 }
 
+*/
 
 function apiCallTestSubmit(){
     document.getElementById("prompt").disabled = true;
-    document.getElementById("prompt").style="background:rgba(100, 100, 100, 0.1);";
-    document.getElementsByClassName("lds-facebook")[0].style="visibility: visible";
+    document.getElementById("prompt").style="background-color: #1d1e23;";
+    document.getElementsByClassName("loader")[0].style="visibility: visible";
 
+    /*
     // Get the values of the input fields
     var model = document.getElementById("selected-model");
     var modelValue = model.value;
@@ -72,9 +77,11 @@ function apiCallTestSubmit(){
     })
     .then(response => response.json())
     .then(response => updateWithData(response))
+    */
 
 };
 
+/*
 function updateWithData(response){
     if(response.choices[0].text == '' || response.choices[0] == 'API-ERROR'){
         document.getElementById("prompt").value += '[NO COMPLEATION]';
@@ -89,7 +96,7 @@ function updateWithData(response){
     document.getElementsByClassName("lds-facebook")[0].style="visibility: hidden";
 }
 
-
+*/
 
 
 
